@@ -64,6 +64,11 @@ public class ProductoService {
     public void modificar(int id, String nuevoNombre, double nuevoPrecio, int nuevoStock) {
         Producto p = buscarPorId(id);
 
+        /**
+         * no entendi por que coopilot me sugirio usar estas lineas de codigo para resolver el problema de setNombre, pero lo dejo ase tengo que investigar manana.
+         * 
+         *
+         */
         try {
             p.getClass().getMethod("setNombre", String.class).invoke(p, nuevoNombre);
         } catch (NoSuchMethodException e) {
